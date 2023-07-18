@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class='flex items-center flex-col vh-screen vw-screen space-y-7'>
+  <header class='w-full bg-blue-500 text-white p-5'>
+     <h1 class='inline-block text-5xl'>Heading</h1>
+      <ul class='inline-block text-2xl float-right my-4'>
+            <li class='hover:text-blue-700 inline-block px-3'><a href='#about-me'>Home</a></li>
+            <li class='hover:text-blue-700 inline-block px-3'><a href='#projects'>Dashboard</a></li>
+            {{#if logged_in}}
+            <li class='hover:text-blue-700 inline-block px-3'><a href='#logout'>Logout</a></li>
+            {{else}}
+            <li class='hover:text-blue-700 inline-block px-3'><a href='#login'>Login</a></li>
+            {{/if}}
+      </ul>
+  </header>
+  <main>
+      {{{body}}}
+  </main>
+</body>
+
+</html>
